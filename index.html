@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#17243b" />
+    <meta name="description" content="SmartExamz university examination administration platform" />
+    <title>SmartExamz — University Examination Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#loginMain">Skip to main content</a>
+    <div id="loginRoot"></div>
+    <div class="app-shell" hidden>
+      <button class="sidebar-backdrop" id="sidebarBackdrop" data-action="close-mobile-sidebar" aria-label="Close navigation" hidden></button>
+      <aside class="sidebar" id="appSidebar" aria-label="Application sidebar">
+        <a class="brand" href="#" aria-label="SmartExamz home">
+          <span class="brand-mark">S</span>
+          <span>smart<span class="brand-light">examz</span></span>
+        </a>
+        <nav class="side-nav" id="sideNav" aria-label="Main navigation"></nav>
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <span class="help-icon">?</span>
+            <div><strong>Need a hand?</strong><span>Visit the help center</span></div>
+            <span class="help-arrow">↗</span>
+          </div>
+          <div class="profile">
+            <div class="avatar" id="profileAvatar">AM</div>
+            <div class="profile-copy"><strong id="profileName">Ananya Mehta</strong><span id="profileRole">Examination Admin</span></div>
+            <button class="icon-button" id="profileMenu" aria-label="Profile menu">···</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="topbar-leading">
+            <button class="icon-button sidebar-toggle" id="sidebarToggle" data-action="toggle-sidebar" aria-label="Collapse sidebar" aria-expanded="true" aria-controls="appSidebar">☰</button>
+            <div class="breadcrumbs"><span>Workspace</span><span class="crumb-divider">/</span><strong id="breadcrumbCurrent">Dashboard</strong></div>
+          </div>
+          <div class="topbar-actions">
+            <span class="session-role" id="sessionRoleLabel"></span>
+            <span class="topbar-divider"></span>
+            <button class="button sign-out-button" type="button" data-action="sign-out">Sign out</button>
+            <div class="top-avatar">AM</div>
+          </div>
+        </header>
+        <div id="appContent" class="content-area" tabindex="-1"></div>
+      </main>
+    </div>
+    <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+    <div id="modalRoot"></div>
+    <script src="analytics.js"></script>
+    <script src="login-utils.js"></script>
+    <script src="attendance-api.js"></script>
+    <script src="seating-api.js"></script>
+    <script src="student-api.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
